@@ -20,11 +20,6 @@ app.use(express.urlencoded({ extended: true }));
 // Serve uploaded audio files statically
 app.use("/uploads", express.static(path.resolve(__dirname, "../uploads")));
 
-// Health check endpoint
-app.get("/health", (req, res) => {
-    res.status(200).json({ status: "OK", timestamp: new Date() });
-});
-
 // Bind transcription API routes
 app.use("/api", transcriptionRoutes);
 
