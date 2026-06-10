@@ -13,7 +13,6 @@ const PORT = process.env.PORT || 3000;
 // Enable CORS for all requests
 app.use(cors());
 
-// Parse incoming request bodies
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
