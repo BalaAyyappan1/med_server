@@ -5,10 +5,7 @@ const path = require("path");
 // Get the promise-based pool from mysql2
 const promiseDb = db.promise();
 
-/**
- * Handle audio file upload and transcribe it using Whisper.
- * Save the resulting transcription and file path to the DB.
- */
+
 async function transcribeAudioController(req, res) {
     try {
         if (!req.file) {
